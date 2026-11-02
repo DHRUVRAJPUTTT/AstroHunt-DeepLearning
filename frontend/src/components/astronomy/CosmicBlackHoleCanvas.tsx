@@ -28,15 +28,23 @@ export function CosmicBlackHoleCanvas({
     };
     window.addEventListener('resize', handleResize);
 
+    // Cryptographically secure random to satisfy SonarQube (Math.random is
+    // flagged even when used only for visual animation).
+    const randomValues = new Uint32Array(1);
+    const secureRandom = (): number => {
+      window.crypto.getRandomValues(randomValues);
+      return randomValues[0] / 0x100000000;
+    };
+
     // Particle field around black hole / galaxy
     const particleCount = 180;
     const particles = Array.from({ length: particleCount }).map(() => {
-      const radius = 40 + Math.random() * 220;
-      const angle = Math.random() * Math.PI * 2;
-      const speed = (0.004 + Math.random() * 0.012) * (150 / radius);
-      const size = 0.8 + Math.random() * 2.2;
-      const hue = Math.random() > 0.6 ? 270 + Math.random() * 40 : 25 + Math.random() * 35;
-      return { radius, angle, speed, size, hue, alpha: 0.3 + Math.random() * 0.7 };
+      const radius = 40 + secureRandom() * 220;
+      const angle = secureRandom() * Math.PI * 2;
+      const speed = (0.004 + secureRandom() * 0.012) * (150 / radius);
+      const size = 0.8 + secureRandom() * 2.2;
+      const hue = secureRandom() > 0.6 ? 270 + secureRandom() * 40 : 25 + secureRandom() * 35;
+      return { radius, angle, speed, size, hue, alpha: 0.3 + secureRandom() * 0.7 };
     });
 
     let time = 0;
