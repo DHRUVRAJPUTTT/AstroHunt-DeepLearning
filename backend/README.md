@@ -24,3 +24,6 @@ VITE_API_BASE_URL=http://localhost:8000/api
 ```
 
 This project uses a lightweight demo ML classifier until a trained model file is added to `ml/model`.
+
+CHEKING THE DEVSECOPS PIPELINE
+
