@@ -1,0 +1,25 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: astrohunt-frontend-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: astrohunt-frontend
+  ports:
+  - port: 80
+    targetPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: astrohunt-backend-service
+spec:
+  type: ClusterIP
+  selector:
+    app: astrohunt-backend
+  ports:
+  - port: 8000
+    targetPort: 8000
