@@ -10,7 +10,7 @@ import type {
 
 export const DATASET_STATS: DatasetStats = {
   totalSamples: 14850,
-  starCount: 782
+  starCount: 782,
   exoplanetCount: 3410,
   blackHoleCount: 669,
   asteroidCount: 2940,
