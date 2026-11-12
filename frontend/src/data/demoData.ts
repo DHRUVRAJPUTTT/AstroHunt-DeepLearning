@@ -10,13 +10,13 @@ import type {
 
 export const DATASET_STATS: DatasetStats = {
   totalSamples: 14850,
-  starCount: 7820,
+  starCount: 782
   exoplanetCount: 3410,
   blackHoleCount: 669,
   asteroidCount: 2940,
   featuresPerSample: 3197,
   datasetName: 'Cosmic-4C: Multiclass Celestial Survey',
-  datasetSource: 'NASA Kepler / TESS / Chandra / Gaia DR3 Archive',
+  datasetSource: 'NASA Kepler / TESS / Chandra / Gaia DR3 Archive/ ISRO',
 };
 
 // ─── Synthetic Light Curve Generators for 4 Celestial Classes ────────────────
