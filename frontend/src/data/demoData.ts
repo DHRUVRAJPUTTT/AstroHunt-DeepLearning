@@ -12,7 +12,7 @@ export const DATASET_STATS: DatasetStats = {
   totalSamples: 14850,
   starCount: 7820,
   exoplanetCount: 3410,
-  blackHoleCount: 680,
+  blackHoleCount: 669,
   asteroidCount: 2940,
   featuresPerSample: 3197,
   datasetName: 'Cosmic-4C: Multiclass Celestial Survey',
